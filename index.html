@@ -8,18 +8,18 @@
 </head>
 <body>
     <main>
-        <form>
-            <div class="mb-3 kmToGo">
-              <label for="kmToGo" class="form-label">Chilometri da percorrere</label>
-              <input type="kmToGo" class="form-control" id="kmToGo" aria-describedby="kmToGoHelp">
-              <div id="kmToGoHelp" class="form-text">In base alla tua età avrai una scontistica dedicata</div>
-            </div>
-            <div class="mb-3 age">
-              <label for="age" class="form-label">Età del passeggero</label>
-              <input type="age" class="form-control" id="age">
-            </div>
-            <button id="button" type="submit" class="btn btn-primary">Submit</button>
-          </form>
+      <form>
+        <div class="mb-3">
+          <label for="age" class="form-label">Inserisci la tua età</label>
+          <input type="email" class="form-control" id="age" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">In base alla tua età avrai una scontistica dedicata</div>
+        </div>
+        <div class="mb-3">
+          <label for="kmToGo" class="form-label">Chilometri da percorrere</label>
+          <input type="password" class="form-control" id="kmToGo">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </main>
     <script src="./JS/main.js"></script>
 </body>
