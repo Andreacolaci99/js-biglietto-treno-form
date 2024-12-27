@@ -14,11 +14,11 @@ submitButton.addEventListener(`click`, function(event){
     if (!isNaN(kmToGo)){
 
         if (Number(age)<18){
-    
+
        alert(`Hai diritto a uno sconto del 20%! Il prezzo finale è € ${scontogiovani.toFixed(2)}`);
    
        }else if (!isNaN(kmToGo) && Number(age)>65){
-   
+        
        alert(`Hai diritto a uno sconto del 40%! Il prezzo finale è € ${scontoanziani.toFixed(2)}`);
    
        }else {

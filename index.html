@@ -8,19 +8,20 @@
 </head>
 <body>
     <main>
-      <form>
+      <form class="container">
         <div class="mb-3">
           <label for="age" class="form-label">Inserisci la tua età</label>
-          <input type="email" class="form-control" id="age" aria-describedby="emailHelp">
+          <input type="number" class="form-control" id="age" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">In base alla tua età avrai una scontistica dedicata</div>
         </div>
         <div class="mb-3">
           <label for="kmToGo" class="form-label">Chilometri da percorrere</label>
-          <input type="password" class="form-control" id="kmToGo">
+          <input type="number" class="form-control" id="kmToGo">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./JS/main.js"></script>
 </body>
 </html>
