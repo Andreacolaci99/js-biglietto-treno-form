@@ -1,29 +1,32 @@
 console.log(document)
 
 const submitButton = document.querySelector(`#button`)
-const kmToGo = document.querySelector(`body > form .kmToGo`)
-const age = document.querySelector(`body > form .age`)
+const kmToGo = document.querySelector(`#kmToGo`)
+const age = document.querySelector(`#age`)
+const price = document.querySelector(`#price`)
 const km_price = 0.21 ;
 const finalprice = kmToGo * km_price;
 const scontogiovani = finalprice - (finalprice * 0.20);
 const scontoanziani = finalprice - (finalprice * 0.40);
+let result = 0;
 
 submitButton.addEventListener(`click`, function(event){
-    event.preventDefault()
+  event.preventDefault()
+  
+  if (!isNaN(kmToGo.value)){
 
-    if (!isNaN(kmToGo)){
+      if (Number(age.value)<18){
 
-        if (Number(age)<18){
-
-       alert(`Hai diritto a uno sconto del 20%! Il prezzo finale è € ${scontogiovani.toFixed(2)}`);
-   
-       }else if (!isNaN(kmToGo) && Number(age)>65){
-        
-       alert(`Hai diritto a uno sconto del 40%! Il prezzo finale è € ${scontoanziani.toFixed(2)}`);
-   
-       }else {
-           alert(`Pagherai tariffa intera di € ${finalprice.toFixed(2)}`);
-       }
+     result = scontogiovani ;
+ 
+     }else if (!isNaN(kmToGo.value) && Number(age.value)>65){
+      
+     result = scontoanziani ;
+ 
+     }else {
+      result = finalprice ; 
+    }
+     price.innerHTML =`Il prezzo da pagare è ${result}`
    }
- }
+}
 )
