@@ -1,9 +1,8 @@
-console.log(document)
 
-const age = document.querySelector(`#age`)
-const kmToGo = document.querySelector(`#kmToGo`)
-const submitButton = document.querySelector(`#button`)
-const price = document.querySelector(`#price`)
+const age = document.getElementById(`age`)
+const kmToGo = document.getElementById(`kmToGo`)
+const submitButton = document.getElementById(`button`)
+const price = document.getElementById(`price`)
 const km_price = kmToGo.value * 0.21 ;
 const scontogiovani = km_price - (km_price * 0.20);
 const scontoanziani = km_price - (km_price * 0.40);
@@ -32,3 +31,4 @@ submitButton.addEventListener(`click`, function(event){
    }
 }
 )
+console.log(result)
